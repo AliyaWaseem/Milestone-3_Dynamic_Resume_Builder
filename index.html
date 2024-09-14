@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="icon" type="image/x-icon" href="asset/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+     <h1>Milestone 3</h1>
+     <h1>Dynamic Resume Builder</h1>
+    <!-- Resume Input Form -->
+    <section class="form-section">
+        <h2>Fill Your Details to Generate Resume</h2>
+        <form id="resume-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+
+                <label for="job-title">Job Title:</label>
+                <input type="text" id="job-title" placeholder="Enter your job title" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+                <label for="profile-pic">Upload Profile Picture:</label>
+                <input type="file" id="profile-pic" accept="image/*" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <textarea id="skills" placeholder="Enter your skills, separated by commas" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience</legend>
+                <div id="work-experience-container">
+                    <div class="work-experience-item">
+                        <label for="job-title-1">Job Title:</label>
+                        <input type="text" id="job-title-1" placeholder="Job Title" required>
+
+                        <label for="company-1">Company:</label>
+                        <input type="text" id="company-1" placeholder="Company Name" required>
+
+                        <label for="duration-1">Duration:</label>
+                        <input type="text" id="duration-1" placeholder="Duration (e.g., 2019-2021)" required>
+                    </div>
+                </div>
+                <button type="button" id="add-work-experience">Add More Experience</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <div id="education-container">
+                    <div class="education-item">
+                        <label for="degree-1">Degree:</label>
+                        <input type="text" id="degree-1" placeholder="Degree" required>
+
+                        <label for="institution-1">Institution:</label>
+                        <input type="text" id="institution-1" placeholder="Institution Name" required>
+
+                        <label for="year-1">Year:</label>
+                        <input type="text" id="year-1" placeholder="Year of Graduation" required>
+                    </div>
+                </div>
+                <button type="button" id="add-education">Add More Education</button>
+            </fieldset>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+    </section>
+
+    <!-- Resume Display Section -->
+    <section class="resume-section" id="resume-section">
+        <h2>Your Resume</h2>
+        <div class="resume" id="resume">
+            <!-- Resume content will be generated dynamically here -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
